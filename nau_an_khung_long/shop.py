@@ -9,7 +9,7 @@ SHOP_INGREDIENTS = [
     {"icon": "🍚", "name": "Gạo", "price": 10},
     {"icon": "🌶️", "name": "Ớt cay", "price": 15},
     {"icon": "😃", "name": "Niềm vui", "price": 20},
-    {"icon": "🥩", "name": "Thịt tươi", "price": 25},
+    {"icon": "🥩", "name": "Thịt tươi", "price": 13},
 ]
 
 # Danh sách bí kíp (Tips)

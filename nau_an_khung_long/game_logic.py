@@ -4,15 +4,15 @@ import random
 # 1. BẢNG GIÁ (Bao gồm nguyên liệu cơ bản, trung gian và món hoàn chỉnh)
 PRICES = {
     "💧": 8, "🔥": 8, "🥬": 13, "🥚": 13, "🍚": 13, "🥩": 25, "😃": 30, "🌶️": 8,
-    "♨️ (Nước sôi)": 10,         # Nguyên liệu trung gian 
-    "🍳 (Trứng ốp la)": 15,     # Nguyên liệu trung gian / Món ăn cơ bản
-    "🍖 (Thịt nướng)": 40,
-    "🥗 (Salad)": 25,
-    "🍲 (Thịt luộc)": 50,
-    "🥣 (Canh rau)": 30,
-    "🍛 (Cơm trứng)": 35,
-    "🍛 (Cà ri vui vẻ)": 80,
-    "🌮 (Thịt cuốn rau)": 60
+    "♨️": 10,         # Nguyên liệu trung gian 
+    "🍳": 15,     # Nguyên liệu trung gian / Món ăn cơ bản
+    "🍖": 40,
+    "🥗": 25,
+    "🍲": 50,
+    "🥣": 30,
+    "🍛": 35,
+    "🍛": 80,
+    "🌮": 60
 }
 
 # 2. CÔNG THỨC NẤU ĂN PHONG PHÚ (Hỗ trợ nấu nhiều giai đoạn)
