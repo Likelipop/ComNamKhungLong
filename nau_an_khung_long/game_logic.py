@@ -91,7 +91,7 @@ def compose(ingredients_str, inventory):
     recipe_key = make_recipe_key(raw_items)
     
     # Nếu đúng công thức
-    if recipe_key in RECIPES and random.random() <= 0.6:
+    if recipe_key in RECIPES and random.random() <= 0.65:
         result_dish = RECIPES[recipe_key]
         # THÊM MÓN VỪA NẤU VÀO KHO
         inventory[result_dish] = inventory.get(result_dish, 0) + 1

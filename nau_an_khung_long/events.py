@@ -10,9 +10,10 @@ def load_random_quote():
 
 def get_customer():
     customers = [
-        {"desc": "Tôi đang đau răng, cần món gì mềm mềm... 🦖", "wants": "🥗"},
-        {"desc": "Tôi đang rất buồn bã, cần một cú sốc vị giác! 🦕", "wants": "🍛"},
-        {"desc": "Đói quá đói quá, cho xin miếng thịt! 🦖", "wants": "🍖"}
+        {"desc": "Khủng Long đang đau răng, cần món gì mềm mềm... 🦖", "wants": "🥗"},
+        {"desc": "Khủng Long đang bùn, mún có gì cay cay vui vẻ vui vẻ! 🦕", "wants": "🍛"},
+        {"desc": "Đói quá đói quá, cho xin miếng thịt! 🦖", "wants": "🍖"},
+        {"desc": "Khủng Long thích ăn cơm chiến ốp la huhu 🦖", "wants": "🍛"}
     ]
     return random.choice(customers)
 
