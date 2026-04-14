@@ -137,13 +137,13 @@ with col_left:
                         if status == "success":
                             earned = calculate_price(serve_input)
                             st.session_state.money += earned
-                            st.session_state.msg_right_col = f"Khách rất hài lòng! Bạn nhận được {earned} đồng.\n\n📖 '{load_random_quote()}'"
+                            st.session_state.msg_right_col = f"Khủng Long rất hài lòng! Bạn nhận được {earned} đồng.\n\n📖 '{load_random_quote()}'"
                             st.session_state.img_right_col =  os.path.join("nau_an_khung_long","assets", "a.png")
                         elif status == "scam":
-                            st.session_state.msg_right_col = "Khách ăn xong khen ngon rồi chạy mất dép! Không thu được đồng nào."
+                            st.session_state.msg_right_col = "Khủng Long ăn xong khen ngon rồi chạy mất dép! Không thu được đồng nào."
                             st.session_state.img_right_col =  os.path.join("nau_an_khung_long","assets", "a.png")
                         elif status == "leave":
-                            st.session_state.msg_right_col = "Khách chê món này không đúng ý, tức giận bỏ đi!"
+                            st.session_state.msg_right_col = "Khủng Long nhảy lên làm nũng hong chịu đou!"
                             st.session_state.img_right_col = os.path.join("nau_an_khung_long","assets", "b.png")
 
                         st.session_state.waiting_next = True
