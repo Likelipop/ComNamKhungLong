@@ -1,6 +1,8 @@
 import random
 import json
-impor os
+import os
+
+
 def load_random_quote():
     with open(os.path.join("data", "quotes.json"), "r", encoding="utf-8") as f:
         quotes = json.load(f)
