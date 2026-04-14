@@ -138,14 +138,14 @@ with col_left:
                             earned = calculate_price(serve_input)
                             st.session_state.money += earned
                             st.session_state.msg_right_col = f"Khách rất hài lòng! Bạn nhận được {earned} đồng.\n\n📖 '{load_random_quote()}'"
-                            st.session_state.img_right_col = "assets/a.png"
+                            st.session_state.img_right_col =  os.path.join("assets", "a.png")
                         elif status == "scam":
                             st.session_state.msg_right_col = "Khách ăn xong khen ngon rồi chạy mất dép! Không thu được đồng nào."
-                            st.session_state.img_right_col = "assets/b.png"
+                            st.session_state.img_right_col =  os.path.join("assets", "a.png")
                         elif status == "leave":
                             st.session_state.msg_right_col = "Khách chê món này không đúng ý, tức giận bỏ đi!"
-                            st.session_state.img_right_col = "assets/b.png"
-                        
+                            st.session_state.img_right_col = os.path.join("assets", "b.png")
+
                         st.session_state.waiting_next = True
                         st.session_state.customers_served += 1
                         st.rerun()
@@ -168,7 +168,7 @@ with col_right:
         st.subheader("Bảo Kê Đòi Tiền!")
         # ĐÃ SỬA HIỂN THỊ ẢNH BẢO KÊ
         if os.path.exists("assets/c.png"):
-            st.image("assets/c.png", use_container_width=True)
+            st.image(os.path.join("assets", "c.png"), use_container_width=True)
         else:
             st.error("Không tìm thấy ảnh: assets/c.png")
             
