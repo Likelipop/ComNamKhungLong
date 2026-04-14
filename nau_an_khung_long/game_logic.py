@@ -3,7 +3,7 @@ import random
 
 # 1. BẢNG GIÁ (Bao gồm nguyên liệu cơ bản, trung gian và món hoàn chỉnh)
 PRICES = {
-    "💧": 2, "🔥": 2, "🥬": 5, "🥚": 5, "🍚": 5, "🥩": 15, "😃": 10, "🌶️": 8,
+    "💧": 8, "🔥": 8, "🥬": 13, "🥚": 13, "🍚": 13, "🥩": 25, "😃": 30, "🌶️": 8,
     "♨️ (Nước sôi)": 10,         # Nguyên liệu trung gian 
     "🍳 (Trứng ốp la)": 15,     # Nguyên liệu trung gian / Món ăn cơ bản
     "🍖 (Thịt nướng)": 40,
