@@ -16,7 +16,7 @@ SHOP_INGREDIENTS = [
 SHOP_TIPS = [
     {"id": "tip_1", "name": "Cuốn chiếu", "price": 30, "desc": "Bí quyết kết hợp 3 nguyên liệu cơ bản.", "content": "🥩 + 🥬 + 🔥 = 🌮 (Thịt cuốn rau) bán được 60 đồng!"},
     {"id": "tip_2", "name": "Luộc và Nấu", "price": 50, "desc": "Cách tạo ra Nước Sôi để làm các món canh.", "content": "Nấu 💧 + 🔥 để ra ♨️ (Nước sôi). Sau đó lấy ♨️ + 🥩 = 🍲 (Thịt luộc) hoặc ♨️ + 🥬 = 🥣 (Canh rau)."},
-    {"id": "tip_3", "name": "Chiên và xào", "price": 50, "desc": "Cách tạo ra các món chiên và xào.", "content": "Nấu 🥚+ 🔥 để ra 🍳 (Nước sôi). Sau đó lấy 🍳 + 🍚 = 🍛 (Cơm trứng) hoặc ♨️ + 🥬 = 🥣 (Canh rau)."},
+    {"id": "tip_3", "name": "Chiên và xào", "price": 50, "desc": "Cách tạo ra các món chiên và xào.", "content": "Nấu 🥚+ 🔥 để ra 🍳 (Nước sôi). Sau đó lấy 🍳 + 🍚 = 🍛 (Cơm trứng) "},
     {"id": "tip_4", "name": "Bữa ăn hạnh phúc", "price": 100, "desc": "Công thức đắt giá nhất nhà hàng!", "content": "Trước tiên nướng thịt (🥩+🔥). Sau đó lấy 🍖 (Thịt nướng) + 😃 + 🌶️ = 🍛 (Cà ri vui vẻ) bán được tận 80 đồng!"},
 ]
 
