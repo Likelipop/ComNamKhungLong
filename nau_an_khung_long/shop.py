@@ -81,10 +81,10 @@ def render_shop():
 
         st.markdown("### 🏮 Quẻ Xăm Của Bạn")
         st.info(st.session_state.current_que)
-        time.sleep(3)
-
+        
+        
         if st.button("Tiếp tục (Continue)"):
-            st.session_state.current_que = None
+            st.session_state.current_que = None    
             st.rerun()
 
 
