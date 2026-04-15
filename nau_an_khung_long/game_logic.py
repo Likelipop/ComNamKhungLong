@@ -3,16 +3,17 @@ import random
 
 # 1. BẢNG GIÁ (Bao gồm nguyên liệu cơ bản, trung gian và món hoàn chỉnh)
 PRICES = {
-    "💧": 8, "🔥": 8, "🥬": 13, "🥚": 13, "🍚": 13, "🥩": 25, "😃": 30, "🌶️": 8,
-    "♨️": 10,         # Nguyên liệu trung gian 
-    "🍳": 15,     # Nguyên liệu trung gian / Món ăn cơ bản
-    "🍖": 40,
-    "🥗": 25,
-    "🍲": 50,
-    "🥣": 30,
-    "🍛": 35,
-    "🍛": 80,
-    "🌮": 60
+    "💧": 16, 
+    "🔥": 16, "🥬": 26, "🥚": 26, "🍚": 26, "🥩": 26, "😃": 60, "🌶️": 17,
+    "♨️": 20,         # Nguyên liệu trung gian 
+    "🍳": 30,     # Nguyên liệu trung gian / Món ăn cơ bản
+    "🍖": 80,
+    "🥗": 50,
+    "🍲": 100,
+    "🥣": 60,
+    "🍛": 70,
+    "🍛": 160,
+    "🌮": 120
 }
 
 # 2. CÔNG THỨC NẤU ĂN PHONG PHÚ (Hỗ trợ nấu nhiều giai đoạn)
@@ -91,7 +92,7 @@ def compose(ingredients_str, inventory):
     recipe_key = make_recipe_key(raw_items)
     
     # Nếu đúng công thức
-    if recipe_key in RECIPES and random.random() <= 0.65:
+    if recipe_key in RECIPES and random.random() <= 0.85:
         result_dish = RECIPES[recipe_key]
         # THÊM MÓN VỪA NẤU VÀO KHO
         inventory[result_dish] = inventory.get(result_dish, 0) + 1

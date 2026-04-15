@@ -16,12 +16,16 @@ from shop import render_shop # THÊM DÒNG NÀY VÀO ĐÂY
 
 st.set_page_config(layout="wide", page_title="Nấu ăn cho Khủng Long 🦖", page_icon="🍳")
 
+
 def reset_inputs():
     st.session_state["compose_in"] = ""
     st.session_state["serve_in"] = ""
     st.session_state["answer_in"] = ""
 
+
+
 if 'money' not in st.session_state:
+    print("try")
     st.session_state.money = 100
     st.session_state.inventory = init_inventory()
     st.session_state.current_customer = get_customer()
@@ -41,25 +45,18 @@ if st.session_state.money >= 1000:
     st.success("🎉 CHÚC MỪNG BẠN ĐÃ ĐƯỢC TỰ DO! 🎉")
     st.stop()
 
-# elapsed_time = time.time() - st.session_state.day_start_time
-# if elapsed_time > 120 and not st.session_state.mafia_event:
-#     # Cuối ngày có 20% gặp bảo kê
-#     import random
-#     if random.random() <= 0.2:
-#         st.session_state.mafia_event = True
-#         st.session_state.riddle = get_mafia_riddle()
-#     st.session_state.day_start_time = time.time() # Reset ngày mới
 # --- KIỂM TRA HẾT NGÀY ---
 if st.session_state.customers_served >= st.session_state.total_customers:
     st.success("🌙 Hết ngày rồi! Sang ngày mới...")
     
-    import random
+    
     # reset ngày mới
     st.session_state.total_customers = random.randint(3, 6)
     st.session_state.customers_served = 0
     
     # 20% gặp bảo kê đầu ngày
     if random.random() <= 0.2:
+
         st.session_state.mafia_event = True
         st.session_state.riddle = get_mafia_riddle()
     
