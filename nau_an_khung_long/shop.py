@@ -129,7 +129,7 @@ def render_shop():
         
         # Tạo giá tiền ngẫu nhiên cho mỗi lần render hoặc cố định trong session
         if 'que_price' not in st.session_state:
-            st.session_state.que_price = random.randint(10, 100)
+            st.session_state.que_price = random.randint(100, 200)
         
         st.warning(f"Phí xin quẻ: **{st.session_state.que_price}đ**")
         
@@ -143,7 +143,7 @@ def render_shop():
                 st.session_state.current_que = random.choice(ques)
                 
                 # Reset giá quẻ cho lần sau
-                st.session_state.que_price = random.randint(10, 100)
+                st.session_state.que_price = random.randint(250, 400)
                 st.rerun()
             else:
                 st.error("Bạn không đủ tiền công đức để xin quẻ!")
