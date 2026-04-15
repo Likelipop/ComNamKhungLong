@@ -74,9 +74,19 @@ def render_shop():
 
     # ================= HIỂN THỊ QUẺ (TRANG ĐỌC QUẺ) =================
     if st.session_state.current_que:
-        st.balloons()
+        if random.random() < 0.05: # 5% có quẻ đặc biệt
+            st.balloons()
+        else:
+            st.snow()
         st.markdown("### 🏮 Quẻ Xăm Của Bạn")
         st.info(st.session_state.current_que)
+        time.sleep(3)
+        if random.random() < 0.05: # 5% có quẻ đặc biệt
+            st.balloons()
+        else:
+            st.snow()
+        time.sleep(3)
+
         
         if st.button("Tiếp tục (Continue)"):
             st.session_state.current_que = None
