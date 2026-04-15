@@ -87,7 +87,7 @@ def render_shop():
             st.session_state.current_que = None    
             st.rerun()
 
-
+    return
 
     # ================= GIAO DIỆN SHOP CHÍNH =================
     tab1, tab2, tab3 = st.tabs(["🍎 Nguyên liệu", "📜 Bí kíp nấu ăn", "🏮 Xin quẻ"])
