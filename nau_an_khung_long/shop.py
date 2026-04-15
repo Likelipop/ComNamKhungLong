@@ -81,16 +81,11 @@ def render_shop():
         st.markdown("### 🏮 Quẻ Xăm Của Bạn")
         st.info(st.session_state.current_que)
         time.sleep(3)
-        if random.random() < 0.05: # 5% có quẻ đặc biệt
-            st.balloons()
-        else:
-            st.snow()
-        time.sleep(3)
 
-        
         if st.button("Tiếp tục (Continue)"):
             st.session_state.current_que = None
             st.rerun()
+            
         return # Dừng render phần shop bên dưới khi đang đọc quẻ
 
     # ================= GIAO DIỆN SHOP CHÍNH =================
