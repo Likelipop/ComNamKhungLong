@@ -59,7 +59,7 @@ SHOP_TIPS = [
 # Giả sử hàm load_que này đọc file data que.json
 def load_que_data():
     try:
-        with open(os.path.join("nau_an_khung_long", "data", "data_que.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join("nau_an_khung_long", "data", "que.json"), "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         return ["Vạn sự tùy duyên.", "Hãy kiên nhẫn hơn.", "Một cơ hội mới đang đến."]
