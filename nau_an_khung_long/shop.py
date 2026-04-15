@@ -3,7 +3,6 @@ import streamlit as st
 import json
 import os
 import random
-
     
 # Danh sách nguyên liệu bán trong shop
 SHOP_INGREDIENTS = [
@@ -60,7 +59,7 @@ SHOP_TIPS = [
 # Giả sử hàm load_que này đọc file data que.json
 def load_que_data():
     try:
-        with open('data_que.json', 'r', encoding='utf-8') as f:
+        with open(os.path.join("nau_an_khung_long", "data", "data_que.json"), "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         return ["Vạn sự tùy duyên.", "Hãy kiên nhẫn hơn.", "Một cơ hội mới đang đến."]
@@ -138,7 +137,7 @@ def render_shop():
                 st.session_state.current_que = random.choice(ques)
                 
                 # Reset giá quẻ cho lần sau
-                st.session_state.que_price = random.randint(300, 500)
+                st.session_state.que_price = random.randint(10, 100)
                 st.rerun()
             else:
                 st.error("Bạn không đủ tiền công đức để xin quẻ!")
