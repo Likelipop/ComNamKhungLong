@@ -123,7 +123,7 @@ def render_shop():
         
         # Tạo giá tiền ngẫu nhiên cho mỗi lần render hoặc cố định trong session
         if 'que_price' not in st.session_state:
-            st.session_state.que_price = random.randint(300, 500)
+            st.session_state.que_price = random.randint(10, 100)
         
         st.warning(f"Phí xin quẻ: **{st.session_state.que_price}đ**")
         
