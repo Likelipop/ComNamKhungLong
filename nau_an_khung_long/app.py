@@ -48,7 +48,7 @@ if st.session_state.money >= 1000:
 # --- KIỂM TRA HẾT NGÀY ---
 if st.session_state.customers_served >= st.session_state.total_customers:
     st.success("🌙 Hết ngày rồi! Sang ngày mới...")
-    
+    time.sleep(3)
     
     # reset ngày mới
     st.session_state.total_customers = random.randint(3, 6)
@@ -116,6 +116,7 @@ with col_left:
                 st.error("Sai rồi! Bị trừ 50 đồng.")
                 st.session_state.money -= 50
                 st.session_state.mafia_event = False
+                time.sleep(4)
             st.rerun()
     else:
         st.subheader("🍽️ Phục vụ (Serve)")
@@ -164,7 +165,7 @@ with col_right:
     if st.session_state.mafia_event:
         st.subheader("Bảo Kê Đòi Tiền!")
         # ĐÃ SỬA HIỂN THỊ ẢNH BẢO KÊ
-        if os.path.exists("assets/c.png"):
+        if os.path.exists(os.path.join("nau_an_khung_long","assets", "c.png")):
             st.image(os.path.join("nau_an_khung_long","assets", "c.png"), use_container_width=True)
         else:
             st.error("Không tìm thấy ảnh: assets/c.png")
