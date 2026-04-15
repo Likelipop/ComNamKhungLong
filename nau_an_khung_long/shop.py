@@ -74,10 +74,11 @@ def render_shop():
 
     # ================= HIỂN THỊ QUẺ (TRANG ĐỌC QUẺ) =================
     if st.session_state.current_que:
-        if random.random() < 0.05: # 5% có quẻ đặc biệt
+        if random.random() < 0.5: # 5% có quẻ đặc biệt
             st.balloons()
         else:
             st.snow()
+
         st.markdown("### 🏮 Quẻ Xăm Của Bạn")
         st.info(st.session_state.current_que)
         time.sleep(3)
@@ -85,8 +86,8 @@ def render_shop():
         if st.button("Tiếp tục (Continue)"):
             st.session_state.current_que = None
             st.rerun()
-            
-        return # Dừng render phần shop bên dưới khi đang đọc quẻ
+
+
 
     # ================= GIAO DIỆN SHOP CHÍNH =================
     tab1, tab2, tab3 = st.tabs(["🍎 Nguyên liệu", "📜 Bí kíp nấu ăn", "🏮 Xin quẻ"])
