@@ -10,10 +10,22 @@ def load_random_quote():
 
 def get_customer():
     customers = [
+        # Các món cơ bản
         {"desc": "Khủng Long đang đau răng, cần món gì mềm mềm... 🦖", "wants": "🥗"},
-        {"desc": "Khủng Long đang bùn, mún có gì cay cay vui vẻ vui vẻ! 🦕", "wants": "🍛"},
         {"desc": "Đói quá đói quá, cho xin miếng thịt! 🦖", "wants": "🍖"},
-        {"desc": "Khủng Long thích ăn cơm chiến ốp la huhu 🦖", "wants": "🍛"}
+        
+        # Các món nấu 2 giai đoạn (Sử dụng nước sôi ♨️)
+        {"desc": "Bé Khủng Long muốn ăn thịt nhưng phải là thịt luộc cho thanh đạm cơ! 🦕", "wants": "🍲"},
+        {"desc": "Khủng Long bị cảm rồi, muốn húp một bát canh rau nóng hổi... 🦖", "wants": "🥣"},
+        {"desc": "Trời lạnh quá, cho xin một ít nước sôi để sưởi ấm cái bụng nào! ♨️", "wants": "♨️"},
+
+        # Các món từ Trứng (🥚)
+        {"desc": "Chỉ cần một quả trứng chiên vàng ươm là đủ hạnh phúc rồi! 🍳", "wants": "🍳"},
+        {"desc": "Khủng Long thích ăn cơm chiến ốp la huhu 🦖", "wants": "🍛"},
+
+        # Các món phức tạp / Cay
+        {"desc": "Khủng Long đang bùn, mún có gì cay cay vui vẻ vui vẻ! 🦕", "wants": "🍛"},
+        {"desc": "Cần một đĩa cơm thật thịnh soạn với thịt nướng và gia vị cay nồng! 🦖", "wants": "🍛"}
     ]
     return random.choice(customers)
 

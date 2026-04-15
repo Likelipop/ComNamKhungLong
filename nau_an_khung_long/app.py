@@ -55,7 +55,7 @@ if st.session_state.customers_served >= st.session_state.total_customers:
     st.session_state.customers_served = 0
     
     # 20% gặp bảo kê đầu ngày
-    if random.random() <= 0.2:
+    if random.random() <= 0.65:
 
         st.session_state.mafia_event = True
         st.session_state.riddle = get_mafia_riddle()
