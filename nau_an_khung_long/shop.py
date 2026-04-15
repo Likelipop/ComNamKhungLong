@@ -1,5 +1,14 @@
 import streamlit as st
+import json
+import os
 
+def load_que_data():
+    try:
+        with open(os.path.join("nau_an_khung_long", "data", "data_que.json"), "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return ["Vạn sự tùy duyên.", "Hãy kiên nhẫn hơn.", "Một cơ hội mới đang đến."]
+    
 # Danh sách nguyên liệu bán trong shop
 SHOP_INGREDIENTS = [
     {"icon": "💧", "name": "Nước", "price": 5},
@@ -57,7 +66,7 @@ def render_shop():
         st.session_state.unlocked_tips = []
 
     # Chia Shop thành 2 Tab cho gọn gàng
-    tab1, tab2 = st.tabs(["🍎 Nguyên liệu", "📜 Bí kíp nấu ăn"])
+    tab1, tab2, tab3 = st.tabs(["🍎 Nguyên liệu", "📜 Bí kíp nấu ăn", "🏮 Xin quẻ"])
 
     # ================= TAB 1: MUA NGUYÊN LIỆU =================
     with tab1:
@@ -99,3 +108,29 @@ def render_shop():
                     else:
                         st.toast("Chưa đủ tiền mua bí kíp này!", icon="❌")
             st.divider()
+    
+    # ================= TAB 3: XIN QUẺ (MỚI) =================
+    with tab3:
+        st.subheader("🏮 Miếu Khủng Long Tiên Tri")
+        st.write("Bạn đang gặp bế tắc? Hãy xin một lời khuyên từ thần linh.")
+        
+        # Tạo giá tiền ngẫu nhiên cho mỗi lần render hoặc cố định trong session
+        if 'que_price' not in st.session_state:
+            st.session_state.que_price = random.randint(300, 500)
+        
+        st.warning(f"Phí xin quẻ: **{st.session_state.que_price}đ**")
+        
+        if st.button("🏮 Thành tâm xin quẻ", use_container_width=True):
+            if st.session_state.money >= st.session_state.que_price:
+                # Trừ tiền
+                st.session_state.money -= st.session_state.que_price
+                
+                # Lấy dữ liệu quẻ
+                ques = load_que_data()
+                st.session_state.current_que = random.choice(ques)
+                
+                # Reset giá quẻ cho lần sau
+                st.session_state.que_price = random.randint(300, 500)
+                st.rerun()
+            else:
+                st.error("Bạn không đủ tiền công đức để xin quẻ!")
