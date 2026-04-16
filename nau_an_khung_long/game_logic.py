@@ -31,8 +31,8 @@ RECIPES = {
     make_recipe_key(["♨️", "🥬"]): "🥣",       # Giai đoạn 2: Dùng nước sôi nấu rau
     
     make_recipe_key(["🥚", "🔥"]): "🍳",               # Giai đoạn 1: Rán trứng
-    make_recipe_key(["🍳", "🍚"]): "🍛",   # Giai đoạn 2: Làm cơm trứng
-    
+    make_recipe_key(["🍳", "🍚"]): "🥘",   # Giai đoạn 2: Làm cơm trứng
+
     # --- Nấu phức tạp (3 nguyên liệu) ---
     make_recipe_key(["🍖", "😃", "🌶️"]): "🍛",
 }
