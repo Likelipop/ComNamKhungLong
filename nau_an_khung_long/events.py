@@ -21,7 +21,7 @@ def get_customer():
 
         # Các món từ Trứng (🥚)
         {"desc": "Chỉ cần một quả trứng chiên vàng ươm là đủ hạnh phúc rồi! 🍳", "wants": "🍳"},
-        {"desc": "Khủng Long thích ăn cơm chiến ốp la huhu 🦖", "wants": "🍛"},
+        {"desc": "Khủng Long thích ăn cơm chiến ốp la huhu 🦖", "wants": "🥘"},
 
         # Các món phức tạp / Cay
         {"desc": "Khủng Long đang bùn, mún có gì cay cay vui vẻ vui vẻ! 🦕", "wants": "🍛"},
